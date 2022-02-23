@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { auth } from "../../config";
+import Button from "../Button/Button";
 
 const SignIn = () => {
   const user = useSelector((state) => state.user.user);
@@ -18,13 +19,15 @@ const SignIn = () => {
         passRef.current.value
       );
     } catch (error) {
-      console.log(error);
+      if (error.code === "auth/user-not-found") alert("User not registered");
+      if (error.code === "auth/wrong-password") alert("Invalid Password");
+      console.log(error.code);
     }
     if (response || user) {
       navigate("/dashboard");
     }
   };
-
+  console.log(user);
   return user ? (
     <Navigate to="/dashboard" />
   ) : (
@@ -45,9 +48,9 @@ const SignIn = () => {
           Not Registered <Link to="/register">click here</Link>
         </span>
 
-        <button className="button" onClick={handleSignIn}>
+        <Button className="button" onClick={handleSignIn}>
           Login
-        </button>
+        </Button>
       </div>
     </>
   );

@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./Signup.scss";
 import { auth } from "../../config";
 import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 const SignUp = () => {
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const passRef = useRef(null);
@@ -17,8 +18,14 @@ const SignUp = () => {
         emailRef.current.value,
         passRef.current.value
       )
-      .then((authUser) => naviagte("/dashboard"))
-      .catch((err) => alert(err.code));
+      .then(() => navigate("/dashboard"))
+      .catch((error) => {
+        if (error.code === "auth/weak-password")
+          alert("Password should minimum 6 character long");
+        if (error.code === "auth/email-already-in-use")
+          alert("User already exist.Please login");
+        if (error.code === "auth/invalid-email") alert("invalid email");
+      });
   };
   return (
     <>
@@ -44,10 +51,9 @@ const SignUp = () => {
           Already Registered <Link to="/">click here</Link>
         </span>
 
-        <button className="button" onClick={handleRegister}>
-          {" "}
+        <Button className="button" onClick={handleRegister}>
           Register
-        </button>
+        </Button>
       </div>
     </>
   );
