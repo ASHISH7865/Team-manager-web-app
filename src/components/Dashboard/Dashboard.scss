@@ -9,10 +9,10 @@
   }
 
   .width {
-    width: 200px;
+    width: 175px;
   }
   .extra-width {
-    width: 300px;
+    width: 250px;
   }
 }
 .white {
@@ -34,4 +34,15 @@
   background-color: white;
   overflow: scroll;
   height: 300px;
+}
+
+.dashboard__select {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__select {
+  padding: 10px;
 }

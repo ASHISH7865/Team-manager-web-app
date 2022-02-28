@@ -4,22 +4,27 @@ import { sendData } from "../../app/teamSlice";
 import { useDispatch } from "react-redux";
 import { teamAction } from "../../app/teamSlice";
 import Button from "../Button/Button";
+import { statusOptions } from "../../Constant";
 import "./Modal.scss";
 
 const Modal = ({ show, close }) => {
+  const [selectOption, setSelectOption] = useState("active");
   const nameRef = useRef(null);
   const companyRef = useRef(null);
-  const statusRef = useRef(null);
   const notesRef = useRef(null);
   const dispatch = useDispatch();
-
   // function to send form data
   const submitData = async (e) => {
     e.preventDefault();
+    let date = new Date();
+    let day = `${date.getDate()}`.padStart(2, "0");
+    let month = `${date.getMonth() + 1}`.padStart(2, "0");
+    let year = date.getFullYear();
     const data = {
       name: nameRef.current.value || "",
       company: companyRef.current.value || "",
-      status: statusRef.current.value || "",
+      status: selectOption || "active",
+      time: `${day}/${month}/${year}`,
       notes: notesRef.current.value || "",
     };
 
@@ -42,13 +47,25 @@ const Modal = ({ show, close }) => {
                 <span>Company</span>
                 <input className="form-field" type="text" ref={companyRef} />
               </div>
+
               <div className="form-group">
-                <span>status</span>
-                <input className="form-field" type="text" ref={statusRef} />
+                <span>Notes</span>
+                <input className="form-field" type="text" ref={notesRef} />
               </div>
               <div className="form-group">
-                <span>notes</span>
-                <input className="form-field" type="text" ref={notesRef} />
+                <span>Status</span>
+                <select
+                  className="modal__select"
+                  name="sort"
+                  value={selectOption}
+                  onChange={(e) => setSelectOption(e.target.value)}
+                >
+                  {statusOptions.map((option, index) => (
+                    <option key={index} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
             <footer className="modal_footer">

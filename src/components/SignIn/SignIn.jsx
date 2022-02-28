@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 
 const SignIn = () => {
   const user = useSelector((state) => state.user.user);
-  const navigate = useNavigate();
+
   const emailRef = useRef(null);
   const passRef = useRef(null);
 
@@ -23,11 +23,8 @@ const SignIn = () => {
       if (error.code === "auth/wrong-password") alert("Invalid Password");
       console.log(error.code);
     }
-    if (response || user) {
-      navigate("/dashboard");
-    }
   };
-  console.log(user);
+
   return user ? (
     <Navigate to="/dashboard" />
   ) : (

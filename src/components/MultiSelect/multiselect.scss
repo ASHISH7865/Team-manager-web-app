@@ -1,0 +1,25 @@
+.multiselect-checkbox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.select {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+}
+.options {
+  background: white;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}

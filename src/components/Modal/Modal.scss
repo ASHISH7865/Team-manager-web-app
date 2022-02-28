@@ -64,3 +64,14 @@
     }
   }
 }
+
+.modal__select {
+  border: 1px solid #cdd9ed;
+  border-radius: 0 5px 5px 0;
+  /* border: none; */
+  width: 105px;
+
+  option {
+    text-align: center;
+  }
+}

@@ -23,9 +23,7 @@ const Member = ({ background, item, id }) => {
       <span className="member__name width">{item.name}</span>
       <span className="member__company width">{item.company}</span>
       <span className="member__status width">{item.status}</span>
-      <span className="member__last_update width">
-        {item.time || "27/01/2022"}
-      </span>
+      <span className="member__last_update width">{item.time}</span>
       <span className="member__notes extra-width">{item.notes}</span>
       <img
         className="member__icon"

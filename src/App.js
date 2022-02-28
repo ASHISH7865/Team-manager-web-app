@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import {Routes , Route} from 'react-router'
 import { useDispatch, useSelector } from 'react-redux';
 import { auth } from './config';
@@ -15,12 +15,14 @@ import './App.scss'
 
 
 
+
 const App = () => {
-  const user = useSelector((state) => state.user.user); 
+  
   const dataChange = useSelector((state) => state.team.dataChange);
   const dispatch = useDispatch();
-  
+
   useEffect(()=>{
+  
     dispatch(fetchData())
   },[dataChange])
 
@@ -42,7 +44,6 @@ const App = () => {
   },[]);
   
   
-  
   return (
   <div className='app'> 
    
@@ -51,7 +52,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<SignIn />} />
       <Route path='/register' element={<SignUp />} />
-    { user &&  <Route path='/dashboard' element={<Dashboard  /> } /> }
+   <Route path='/dashboard' element={<Dashboard  /> } />
     </Routes>
     
     

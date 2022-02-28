@@ -4,7 +4,8 @@ import teamReducer from './teamSlice'
 const store = configureStore({
     reducer:{
         user:userReducer,
-        team:teamReducer
+        team:teamReducer,
+        
     }
 })
 
