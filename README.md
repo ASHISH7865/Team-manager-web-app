@@ -30,10 +30,22 @@ React,Redux-toolkit, Firebase Authentication, Firebase Realtime Storage , Axios
 ``` Not able to implement  ```
 1. I am not able to add select all feature in company filter dropdown.
 But in future i will definitely learn those multiselect dropdown feature.
+2. Form Validation not fully
+3. Route validation Not fully 
+
     
     ``` 
     May be there will be some bugs as well
     ```
+    
+ ```
+ Login Credential :
+ 
+ Email Id : test@gmail.com
+ Password : 123456
+ 
+ ```
+    
     
 ``` Login Page ```
 
@@ -48,3 +60,5 @@ But in future i will definitely learn those multiselect dropdown feature.
 
 
 [Project Demo Live Link ](https://team-manager-web.netlify.app)
+
+[Project Github Repo ](https://github.com/ASHISH7865/Team-manager-web-app)
