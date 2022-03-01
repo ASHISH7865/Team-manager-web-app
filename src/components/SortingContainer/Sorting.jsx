@@ -20,7 +20,10 @@ const Sorting = (props) => {
         Sort by {isActive}
       </div>
       {showOption && (
-        <div className="options">
+        <div
+          className="options"
+          style={{ height: "100px", overflow: "hidden" }}
+        >
           <div onClick={() => handleSort("Active")}>Active</div>
           <div onClick={() => handleSort("Closed")}>Closed</div>
         </div>

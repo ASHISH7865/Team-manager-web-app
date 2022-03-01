@@ -40,7 +40,7 @@ const Dashboard = () => {
       </div>
       <Sorting />
       <MultiSelectAll Data={Data} />
-      <div className="member" style={{ marginTop: "5  0px" }}>
+      <div className="member" style={{ marginTop: "80px" }}>
         <div className="input_checkbox">
           <input
             type="checkbox"

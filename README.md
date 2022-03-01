@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Team manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small Team manager web app where you can manage team member.
 
-## Available Scripts
+``` Key Feature ```
 
-In the project directory, you can run:
+1. You can Add Team Member
+2. You can Delete Team Member
+3. you can Sort Team member based on Active or Closed
+4. Also you can Filter Team member table using multiselect dropdown checkbox
+5. Also you can create Account and have Login Logout Feature
+6. Different routes for SignIn , SignUp , Dashboard.
 
-### `npm start`
+``` Technology Used ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+React,Redux-toolkit, Firebase Authentication, Firebase Realtime Storage , Axios
+```
+1. Axios use for Fetching,Sending,Deleting Team data from Firebase realtime Storage
+2. Firebase authentication use for create user account for login in the app
+3. Redux use for state management of user data and team data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+``` Able to implement ```
 
-### `npm test`
+1. SignIn & SignUp Mechanism
+2. Add Member , Delete Member, Sort Member by  Active or Closed.
+3. User can filter Team data using company from drop down.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+``` Not able to implement  ```
+1. I am not able to add select all feature in company filter dropdown.
+But in future i will definitely learn those multiselect dropdown feature.
+    
+    ``` 
+    May be there will be some bugs as well
+    ```
+    
+``` Login Page ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt text](ScreenShot/1.png "LogIn")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+``` SignUp page ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![alt text](ScreenShot/2.png "SignUp")
 
-### `npm run eject`
+```Dashboard ```
+![alt text](ScreenShot/3.png "SignUp")
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Project Demo Live Link ](https://team-manager-web.netlify.app)

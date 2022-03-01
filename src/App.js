@@ -20,7 +20,7 @@ const App = () => {
   
   const dataChange = useSelector((state) => state.team.dataChange);
   const dispatch = useDispatch();
-
+  const user = useSelector((state) => state.user.user)
   useEffect(()=>{
   
     dispatch(fetchData())
@@ -52,7 +52,7 @@ const App = () => {
     <Routes>
       <Route path='/' element={<SignIn />} />
       <Route path='/register' element={<SignUp />} />
-   <Route path='/dashboard' element={<Dashboard  /> } />
+     {user && <Route path='/dashboard' element={<Dashboard  /> } /> }
     </Routes>
     
     
